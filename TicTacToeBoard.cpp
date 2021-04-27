@@ -65,6 +65,7 @@ void TicTacToeBoard::setGameStatus()
     checkRows();
     checkColumns();
     checkDiagonals();
+    if (gameStatus != GameStatus::GAME_NOT_OVER) return;
     if (allMovesArePlayed())
     {
         gameStatus = GameStatus::DRAW;
